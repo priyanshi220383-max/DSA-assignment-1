@@ -14,3 +14,7 @@ This repository contains all the **lab assignments** and **viva questions** from
 ✔️ **Working code examples**  
 ✔️ **18 Viva Questions + Answers**  
 ✔️ **Complexity proofs** and traces
+
+NAME: Priyanshi
+ROLL NO: 2501010216
+COURSE: Btech-CSE(core)-A
