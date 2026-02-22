@@ -1,15 +1,21 @@
+#-----------------------------------------------------
 # Experiment 3: Recursive Factorial + Call Stack Trace
-# Algorithm
-# If n is 0 or 1, return 1.
-# Otherwise return n × factorial(n-1).
-# Recurrence Relation
-# T(n) = T(n-1) + 1
-# Time Complexity
-# O(n)
-# Space Complexity
-# O(n)
-# (Because n recursive calls are stored in the call stack.)
+# This program calculates factorial using recursion.
 
+# Algorithm:
+# If n is 0 or 1, return 1 (base case).
+# Otherwise, return n × factorial(n-1) (recursive case).
+
+# Recurrence Relation:
+# T(n) = T(n-1) + 1, since each call makes one smaller call.
+
+# Time Complexity:
+# O(n) because the function is called n times.
+
+# Space Complexity:
+# O(n) because n recursive calls are stored in the call stack
+# until the final result is returned.
+#------------------------------------------------------------
 def factorial(n):
     # Reject negative input
     if n < 0:
