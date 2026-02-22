@@ -1,15 +1,14 @@
-# Experiment 4: Fibonacci (Naive vs Memoized) + Call Counter
-# Recurrence Relation
-# F(n) = F(n-1) + F(n-2)
-# Time Complexity
-# Naive Fibonacci → O(2ⁿ)
+# # Experiment 4: Fibonacci (Naive vs Memoized)
+# Recurrence: F(n) = F(n-1) + F(n-2)
+#------------------------------------------------
+# Time Complexity:
+# Naive Fibonacci → O(2^n) (repeated calculations)
 # Memoized Fibonacci → O(n)
-# Space Complexity
-# O(n)
-# Naive Fibonacci recalculates the same subproblems multiple times.
-# For example, F(5) calculates F(3) more than once.
-# This causes exponential growth in function calls.
-# Therefore, it becomes inefficient.
+#------------------------------------------------
+# Space Complexity:
+# O(n) (for recursion stack and memo table)
+# Naive method recomputes the same values many times,
+# causing exponential growth and inefficiency.
 
 # Naive Fibonacci
 naive_calls = 0
