@@ -1,13 +1,11 @@
 
 # RECURSSIvE BINARY SEARCH
 
-# IMPLEMENTING THE BINARY SEARCH RECURSSIVELY 
-# AND EXPLAINING ITS TIME COMPLEXITY - O(LOG(N))
+# EXPLAINING ITS TIME COMPLEXITY - O(LOG(N))
+# Recursive binary earch is an algorithm that finds a target element from a sorted array by repeatedly dividing the
+#the search interval in half using recurssion.
 
-# RECURSIVE BINARY SEARCH IS AN ALGORITHM THAT FINDS A TARGET ELEMENT FROM A SORTED
-#  ARRAY BY REPEATEDLY DIVIDING THE SEARCH INTERVAL IN HALF USING RECURSSION.
-
-def binarySearch(arr, key, low, high):  # DEFINING THE MAIN RECURSSIVE BINARY SEARCH FUNCTION
+def binarySearch(arr, key, low, high):  # defining the main binary search function
 
     # arr - sorted array
     # key - value to find
@@ -21,11 +19,9 @@ def binarySearch(arr, key, low, high):  # DEFINING THE MAIN RECURSSIVE BINARY SE
     
     mid = low + (high - low) // 2  # finding the middle index
     # if we find it like (low + high)//2 - overflow risk
-    # safe method is low + (high-low)//2 - overflow avoided
+    # to avoid overflow risk we took high-low
     
     print(f"low={low}, high={high}, mid={mid}, arr[mid]={arr[mid]}") 
-     # debug trance - shows every steps including current range + mid value
-    
     if arr[mid] == key:  # base case -2 
         # found the key no more recurssion will return the index where it is found
         return mid
@@ -38,9 +34,6 @@ def binarySearch(arr, key, low, high):  # DEFINING THE MAIN RECURSSIVE BINARY SE
 # key is larger - right half search and again size is halfed (i.e. logarithmic reduction) , 
 # new smaller range - (mid+1, high)
         return binarySearch(arr, key, mid+1, high)
-
-
-# testing 
 
 print("=== BINARY SEARCH DEMO ===")
 arr = [1, 3, 5, 7, 9, 11, 13, 15]  # testing the code with this sorted and even length array

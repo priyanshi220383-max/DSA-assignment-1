@@ -1,31 +1,14 @@
 # Experiment 2: Complexity Drill (Operation Counting)
-# 1. Time Complexity
-
 # Time complexity measures how the running time of an algorithm increases with input size.
-
-# 2. Space Complexity
-
+# Time Complexity = O(n)
+# Space Complexity:
 # Space complexity measures how much memory an algorithm uses.
 
-# 3. Single Loop
 
-# A single loop runs n times.
-# Time Complexity = O(n)
-
-# 4. Nested Loop
-
-# Two loops each running n times.
-# Total operations = n × n
-# Time Complexity = O(n²)
-
-# 5. Halving Loop
-
-# The value is divided by 2 in every step.
-# Number of steps = log n
-# Time Complexity = O(log n)
 
 # -----------------------------
 # 1. Single Loop -> O(n)
+#A single loop runs n times.
 # -----------------------------
 def single_loop(n):
     count = 0 
@@ -38,6 +21,9 @@ def single_loop(n):
 
 # -----------------------------
 # 2. Nested Loop -> O(n^2)
+# Two loops each running n times.
+# Total operations = n × n
+# Time Complexity = O(n²)
 # -----------------------------
 def nested_loop(n):
     count = 0
@@ -48,9 +34,11 @@ def nested_loop(n):
     print("Complexity: O(n^2)")
     print("Reason: n * n operations\n")
 
-
 # -----------------------------
 # 3. Triangular Loop -> O(n^2)
+#The outer loop runs n times and the inner loop runs (i+1) times.
+# It counts total operations: n(n+1)/2.
+# Hence, the time complexity is O(n^2)
 # -----------------------------
 def triangular_loop(n):
     count = 0
@@ -64,6 +52,9 @@ def triangular_loop(n):
 
 # -----------------------------
 # 4. Halving Loop -> O(log n)
+# The value is divided by 2 in every step.
+# Number of steps = log n
+# Time Complexity = O(log n)
 # -----------------------------
 def halving_loop(n):
     count = 0
@@ -77,6 +68,10 @@ def halving_loop(n):
 
 # -----------------------------
 # Linear Search
+#It checks each element one by one until the key is found.
+# Best case: O(1) when the first element matches.
+# Worst case: O(n) when the key is last or not present.
+# It counts the number of operations performed.
 # -----------------------------
 def linear_search(arr, key):
     count = 0
@@ -92,6 +87,10 @@ def linear_search(arr, key):
 
 # -----------------------------
 # Binary Search
+#It repeatedly divides the search space into half.
+# Best case: O(1) when the middle element matches.
+# Worst and average case: O(log n).
+# It counts the number of operations performed.
 # -----------------------------
 def binary_search(arr, key):
     low = 0
@@ -114,10 +113,7 @@ def binary_search(arr, key):
     print("Binary Search Not Found")
     print("Operations:", count)
 
-
-# -----------------------------
 # Main Execution
-# -----------------------------
 n = int(input("Enter value of n: "))
 print(f"--- Complexity Snippets ---")
 
